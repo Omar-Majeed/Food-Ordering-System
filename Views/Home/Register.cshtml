@@ -1,0 +1,55 @@
+﻿@model string
+<div class="login-container">
+    <!-- <form action="/registerUser" class="form-login" method="post"> -->
+      <form action="/Home/RegisterUser" id="form" class="form-login" method="post">
+      <ul class="login-nav">
+        <li class="login-nav__item active">
+          <a href="#">Register Simple User</a>
+        </li>
+      </ul>
+
+      <h1 style="color: red;">@{ @Model }</h1>
+      <div class="sameLine">
+        <div>
+            <label for="login-input-user"  class="login__label half">
+                Username
+            </label>
+            <input id="login-input-user"  name="name" class="login__input half" type="text" value="UserName" >
+        </div>
+        
+        <div>
+            <label for="login-input-email" class="login__label ml">
+                E-mail
+            </label>
+            <input id="login-input-email" name="email" class="login__input ml" type="email" value="Email"/>
+        </div>
+        
+       </div>
+
+      <label for="login-input-phone" class="login__label" style="margin-top:20px">
+        Phone
+      </label>
+      <input id="login-input-phone" class="login__input" type="tel" name="phone" style="width:47%" value="Phone Number">
+
+      <div class="sameLine" style="margin-top:20px">
+        <div>
+            <label for="login-input-password" class="login__label">
+                Password
+              </label>
+              <input id="login-input-password" class="login__input" name="password" type="password" />
+          </div>
+          
+          <div>
+            <label for="login-input-passwordConfirm" class="login__label ml">
+                Confirm Password
+              </label>
+              <input id="login-input-passwordConfirm" name="passwordConfirm" class="login__input ml" type="password" />
+          </div>
+      </div>
+      
+      
+      <div class="submit">
+          <input type="submit" class="login__submit" id="submit" placeholder="Register" style="margin-top:60px">
+      </div>
+    </form>
+</div>

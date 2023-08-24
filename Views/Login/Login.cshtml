@@ -1,0 +1,26 @@
+﻿@model string
+
+<div class="login-container" style="max-width:588px;height:590px">
+    <!-- <form action="/loginUser" class="form-login" method="post"> -->
+    <form action="/Login/LoginUser" id="form" class="form-login" method="post">
+      <ul class="login-nav">
+        <li class="login-nav__item active">
+          <a href="#">Log In</a>
+        </li>
+      </ul>     
+      <h3 style="color: red;">@{ @Model }</h3>
+
+            <label for="login-input-email" class="login__label">
+                E-mail
+            </label>
+            <input id="login-input-email" name="email" class="login__input" type="text"/>
+      <label for="login-input-password" class="login__label">
+        Password
+      </label>
+      
+      <input id="login-input-password" name="password" class="login__input" type="password" />
+      <div class="submit">
+          <input type="submit" id = "submit" class="login__submit" placeholder="Login"  style="margin-top:60px">
+      </div>
+    </form>
+  </div>

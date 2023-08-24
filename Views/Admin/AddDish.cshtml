@@ -1,0 +1,59 @@
+﻿@model string
+
+<link rel="stylesheet" href="/css/normalMenu.css">
+<link rel="stylesheet" href="/css/admin.css">
+<style>
+        button a{
+            color:rgb(255, 255, 255);
+            text-decoration: none;
+            padding: 8px;
+      }
+      a{
+        text-decoration: none;
+      }
+      a:hover
+      {
+        color:white;
+        text-decoration: none;
+      }
+
+    </style>
+<center>
+
+    <h3 style="color:green;">@Model</h3>
+
+
+    <u>
+        <h2 id="hding">Add a new dish</h2>
+    </u>
+    <br><br>
+    <form id="form" action="/Admin/AddNewDish" method="post">
+
+        <label for="type">Choose Type of Food:</label>
+    <select id="type" name="type">
+        <option>Fast Food</option>
+        <option>Desi Food</option>
+        <option>Dessert</option>
+    </select><br><br>
+
+    <label for="name">Enter name of dish:</label>
+    <input type="text" id="name" name="dishName" required>
+    <br><br>
+
+    <label for="price">Enter price of dish:</label>
+    <input type="number" id="price" name="price" required>
+    
+    
+
+    <br><br>
+
+    <label for="file">Upload Absolute Path of Image of Dish:</label>
+    <input type="text" id="url" name="path" required>
+    <br><br>
+
+    <input id="submit" type="submit" name="submit" value="submit">
+</form>
+
+<br><br>
+</center>
+<br><br>

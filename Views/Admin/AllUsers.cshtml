@@ -1,0 +1,75 @@
+﻿@model string
+
+<link rel="stylesheet" href="/css/normalMenu.css">
+<link rel="stylesheet" href="/css/admin.css">
+<style>
+        button a{
+            color:rgb(255, 255, 255);
+            text-decoration: none;
+            padding: 8px;
+      }
+      a{
+        text-decoration: none;
+      }
+      a:hover
+      {
+        color:white;
+        text-decoration: none;
+      }
+      
+    </style>
+<center>
+    <u>
+        <h2 id="hding">All regular Users </h2>
+    </u>
+<br><br>
+    <button id="mybutton" class="button">Show Users</button>
+</center>
+
+<br><br>
+<table id="show" border="2">
+    <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Contact number</th>
+                <th>Password</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th>UserName</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>Phone</th>
+            </tr>
+        </tfoot>
+</table>
+<br><br>
+    </center>
+    <center>
+<script>
+        var myData
+        $(document.body).on('click',"#mybutton",function (e) {
+           //doStuff
+            console.log("hello")
+                 $.ajax({type:"GET",
+                     url:"/Admin/getAllUsers",
+                     success: function(result){
+                         myData = result
+                         console.log(myData)
+                         if(myData !=null || myData !=""){
+                            table = $('#show').DataTable( {
+                                data: myData ,destroy: true,
+                                columns: [
+                                    { data: 'name' },
+                                    { data: 'email' },
+                                    { data: 'password' },
+                                    { data: 'phone' },
+                                ]
+                            } );
+                        }
+
+                  }});
+        });
+    </script>

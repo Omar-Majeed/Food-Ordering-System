@@ -1,0 +1,17 @@
+﻿<div class='food activeImages' id='fast_food'>
+@foreach(Item i in Model)
+{
+    
+    string fullPath = @i.ImagePath;
+    string truncatedPath = fullPath.Substring(fullPath.IndexOf("\\img"));
+        Console.WriteLine(truncatedPath);
+
+
+
+                <div class='food_info_container'>
+                    <div class='img_wrap food_image_container'><img src="@truncatedPath.Replace("\\","/")"  alt="@i.Name" class='food_image'><div class='add-to-cart'><p class='img_description' value="@i.Price">@i.Name</p></div></div>
+                <figcaption>@i.Name<br>Rs. @i.Price</figcaption>
+</div>
+
+}
+</div>    

@@ -1,0 +1,50 @@
+﻿@model List<Item>
+<link rel="stylesheet" href="/css/normalMenu.css">
+
+<section role="img " class="background2" aria-label="Image Description">
+            <div class="masthead2">
+
+                <h1>
+                        Our Menu
+                </h1>
+
+            </div>
+</section>
+        <div id="cart">
+            <h3>Cart</h3>
+            <!-- Close Button -->
+                <button id="close-cart" class="button">Close</button>
+            <!-- Cart Item List -->
+            <div style="overflow:auto; height:190px">
+                <div class="cart-item-list">
+                </div>
+            </div>
+            
+            <button id="submit-cart" class="button">Submit</button>
+        </div>
+
+        <div class="buttonGroup">
+            <button class="button" id="dessert"onclick="fastFood()"><a style="text-decoration:none;color:white" href="/Home/Menu">Fast Food</a></button>
+            <button class="button" id="dessert"onclick="desiFood()"><a style="text-decoration:none;color:white" href="/Home/DesiFood">Desi Food</a></button>
+            <button class="button" id="dessert"onclick="desserts()"><a style="text-decoration:none;color:white" href="/Home/Desserts">
+                Desserts
+            </a></button>
+        </div>
+
+        <!-- fast food -->
+
+        @*<vc:ItemCard data="@Model"></vc:ItemCard>*@
+
+        @await Component.InvokeAsync("ItemCard",
+                 new { 
+                     data = @Model }
+                 )
+
+        <!-- <partial name="_FoodCardPartial" data="@Model"/> -->
+
+    </div>
+        <center>
+        <button id="show_menu_button" class="showbutton" style="margin-top:30px">Show Menu</button>
+    </center>
+
+<script src="/js/normalMenu.js"></script>
