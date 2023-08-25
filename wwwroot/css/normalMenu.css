@@ -1,0 +1,490 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+
+/* body */
+body
+{
+    font-weight: 500;
+    font-family: 'RalewayBold', sans-serif;
+    background-color: rgb(240, 238, 237);
+    color:rgb(235, 140, 16);
+    height:100vh;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+/* nav */
+nav
+{
+    z-index:100;
+    width:100%;
+    background-color: white;;
+}
+
+nav ul
+{
+    display: flex;
+    margin: 0;
+    justify-content: space-between;
+    align-items: center;
+    margin-right:50px;
+
+}
+
+nav ul h1
+{
+  font-weight:900;
+  font-style: italic;
+  font-size:30px;
+  margin-left:30px;
+  color: rgb(235, 140, 16);
+}
+
+.noscroll
+{
+    color:white;
+    text-decoration: none;
+}
+
+#header-items
+{
+    display:flex;
+    align-items: center;
+    height:5rem;
+}
+
+.header-item
+{
+    margin-left:19px;
+    list-style-type: none;
+    font-size:1.7vw;
+}
+
+.header-item a
+{
+    color: rgb(235, 140, 16);
+    text-decoration: none;
+}
+/* underline animation */
+.underline a {
+    position: relative;
+  }
+
+  .underline a::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      border-radius: 4px;
+      background-color: rgb(235, 140, 16);
+      bottom: 0;
+      left: 0;
+      transform-origin: right;
+      transform: scaleX(0);
+      transition: transform .3s ease-in-out;
+    }
+
+  .underline a:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+
+#heading
+{
+    margin :30px;
+}
+
+/* footer
+{
+    background-color: rgb(235, 140, 16);
+    height:150px;
+    margin:0;
+    bottom:0;
+    width:100%;
+} */
+
+.container{
+    max-width: 1170px;
+    margin:auto;
+  }
+  .row{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  ul{
+    list-style: none;
+  }
+  .footer{
+    margin-top:40px;
+    background-color: #24262b;
+      padding: 40px 0;
+  }
+  .footer-col{
+     width: 25%;
+     padding: 0 15px;
+  }
+  .footer-col h4{
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+  }
+  .footer-col h4::before{
+    content: '';
+    position: absolute;
+    left:0;
+    bottom: -10px;
+    background-color: #e91e63;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+  }
+  .footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+  }
+  .footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  .footer-col ul li a:hover{
+    color: #ffffff;
+    padding-left: 8px;
+  }
+  .footer-col .social-links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255,255,255,0.2);
+    margin:0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+  }
+  .footer-col .social-links a:hover{
+    color: #24262b;
+    background-color: #ffffff;
+  }
+
+  .links
+{
+    margin-left:3px;
+}
+.social-links a
+{
+    background-color: transparent !important;
+    margin:0 2px 10px 0 !important;
+}
+  .row ul
+  {
+    padding-left:0;
+  }
+  /*responsive*/
+  @media(max-width: 767px){
+    .footer-col{
+      width: 50%;
+      margin-bottom: 30px;
+  }
+  }
+  @media(max-width: 574px){
+    .footer-col{
+      width: 100%;
+  }
+  }
+
+
+.reveal
+{
+    position:relative;
+    transform: translateX(-200%);
+    opacity:0;
+    /* animation: line 0.7s ease-out; */
+
+    transition:1s ease-out;
+}
+
+.reveal.active
+{
+    transform: translateX(0);
+    opacity:1;
+}
+
+#temporary
+{
+    height:100vh;
+}
+
+body {
+	background-color: #e9e9e9;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+	line-height: 1.25;
+	letter-spacing: 1px;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.background2
+  {
+   background-size: cover !important;
+    background: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 23%, rgba(0, 0, 0, 0.816) 100%), url('../img/serv2.jpg') no-repeat center center scroll;
+  }
+
+  .masthead2 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    height: 55vh; /* if you don't want it to take up the full screen, reduce this number */
+    overflow: hidden;
+  }
+
+
+
+  .masthead2 h1 {
+    font-style: normal;
+    font-weight: bold;
+    color: #eee;
+    font-size: 7vmin;
+    letter-spacing: 0.03em;
+    line-height: 1;
+    text-shadow: 1px 2px 4px rgb(235, 140, 16);
+    margin-bottom: 19px;
+    animation: line 0.7s ease-out;
+  }
+
+  .button {
+	color: #ffffff;
+	font-size: 1rem;
+	font-family: 'Montserrat', sans-serif;
+	letter-spacing: 1px;
+	margin-top: 1rem;
+	padding: .75rem;
+	border-radius: 2rem;
+	display: block;
+	width: 15%;
+    background-color: rgb(255, 133, 32);
+	border: none;
+	cursor: pointer;
+}
+
+
+
+.buttonGroup
+{
+    display:flex;
+    justify-content: space-around;
+    margin:55px;
+}
+
+
+.food_image
+{
+    border-radius: 29px;
+    width:29vw;
+    margin:20px;
+}
+
+.food_image_container:hover
+{
+    filter: brightness(70%);
+}
+
+.food_info_container
+{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.food_image_container2
+{
+  display:grid;
+    grid-template-columns: 33% 33% 33%;
+}
+figcaption
+{
+    color:#24262b;
+    font-weight: 700;
+    font-size:20px;
+}
+
+figcaption:hover
+{
+    text-decoration: underline;
+}
+.food
+{
+    display:none;
+}
+
+.active
+{
+    text-decoration: underline;
+    font-weight: 900;
+	  background-color: rgb(255, 81, 0);
+}
+.active:hover
+{
+	background-color: rgb(255, 64, 0);
+
+}
+
+.img_wrap
+{
+    position: relative;
+}
+.img_description
+{
+    line-height:310px;
+    text-align: center;
+    position: absolute;
+    top:0;
+    bottom:0;
+    left: 0;
+    right: 0;
+    color: white;
+    font-weight: 700;
+    visibility: hidden;
+    opacity: 0;
+    font-size:40px;
+    /* transition effect. not necessary */
+    transition: opacity .2s, visibility .2s;
+  }
+
+  .img_wrap:hover .img_description {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .activeImages
+  {
+    display:grid;
+    grid-template-columns: 33% 33% 33%;
+  }
+
+._submit {
+	color: #ffffff;
+	font-size: 1rem;
+	font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin-top: 1rem;
+	padding: .75rem;
+	border-radius: 2rem;
+	display: block;
+	width: 50%;
+	background-color: rgb(255, 81, 0);
+	border: none;
+	cursor: pointer;
+}
+
+._submit:hover {
+	background-color: rgb(253, 90, 14);
+}
+
+#cart {
+  position: fixed;
+  top: 0;
+  margin-top:100px;
+  right: -300px;
+  width: 300px;
+  height: 50%;
+  background: white;
+  transition: right 0.5s ease-in-out;
+  z-index:100;
+  background-color: #24262b;
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  overflow-y:scroll;
+}
+
+#cart h3
+{
+  margin-top:10px;
+  text-align: center;
+}
+
+#cart.show
+{
+  right:0;
+}
+
+.inline
+{
+  display:inline-block;
+}
+#close-cart {
+  font-size: 15px;
+  position: absolute;
+  margin:0;
+  top:0;
+  right:0;
+  width:30%;
+  cursor: pointer;
+  border-radius:0;
+  padding:5px;
+  border-bottom-left-radius: 1rem;
+}
+
+.remove-item
+{
+  border-radius:2rem;
+  background-color:#bd1b1b;
+}
+
+#submit-cart
+{
+  position:absolute;
+  width:40%;
+  bottom:0;
+  right:0;
+  padding:6px;
+  margin-right:70px;
+  margin-bottom:30px;
+}
+
+.cart-item-list
+{
+  margin:15px;
+}
+
+#fast_food
+  {
+    /* display:grid; */
+    /* grid-template-columns: 32% 32% 32%; */
+  }
+
+  .showbutton {
+    width:200px;
+    background: #eb8c10;
+    transition: background ease .25s;
+    border-radius: 50px;
+    display: inline-block;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    margin: 0;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    text-align: center;
+  }
+  .showbutton:hover {
+    background: #ff6a00
+  }
+  .showbutton:focus {
+    outline: 1px solid #fff;
+    outline-offset: -4px;
+  }
